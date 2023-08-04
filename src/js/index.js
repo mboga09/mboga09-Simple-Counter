@@ -7,6 +7,19 @@ import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
+import SecondsCounter from "./component/secondsCounter.jsx";
+//import Card from './component/Card.jsx'
+
+//funcion setInterval(()=>{},1000)
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let contador = 0
+setInterval(()=>{
+
+    ReactDOM.render(<SecondsCounter seconds={contador} />, document.querySelector("#app"));
+    contador = contador+1
+
+},1000)
+
+//ReactDOM.render(<Card />, document.querySelector('#root'));
+
